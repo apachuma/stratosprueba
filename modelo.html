@@ -640,16 +640,16 @@ section.zone-dark .text-white { color: #ffffff !important; }
   display: flex;
   align-items: center;
   gap: 6px;
-  position: fixed;
-  top: 14px;
-  right: 16px;
-  z-index: 100;
-  background: rgba(13,28,72,0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(13,28,72,0.12);
+  border: 1px solid rgba(19,67,119,.2);
   border-radius: 6px;
   padding: 5px 10px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.hdr-dark #lang-switcher {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,.2);
 }
 .lang-flag {
   font-size: 11.5px;
@@ -657,15 +657,28 @@ section.zone-dark .text-white { color: #ffffff !important; }
   font-family: 'Roboto', sans-serif;
   letter-spacing: .08em;
   cursor: pointer;
-  color: rgba(255,255,255,0.45);
+  color: rgba(19,67,119,0.5);
   transition: color .2s;
   -webkit-tap-highlight-color: transparent;
   padding: 2px 0;
+}
+.lang-sep {
+  color: rgba(19,67,119,0.3);
+  font-size: 12px;
+}
+.hdr-dark .lang-flag {
+  color: rgba(255,255,255,0.45);
+}
+.hdr-dark .lang-sep {
+  color: rgba(255,255,255,0.25);
 }
 .lang-flag.active {
   color: #D1AB34;
 }
 .lang-flag:hover {
+  color: #134377;
+}
+.hdr-dark .lang-flag:hover {
   color: rgba(255,255,255,0.9);
 }
 
@@ -905,6 +918,14 @@ section.zone-dark .text-white { color: #ffffff !important; }
         <a href="contacto.html"   data-s="contacto"    class="nav-link text-sbc-blue hover:text-sbc-blue"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
       </nav>
 
+
+      <!-- LANGUAGE SWITCHER (inline in header) -->
+      <div id="lang-switcher">
+        <span id="flag-bo" onclick="setLang('es')" title="Español" class="lang-flag active">ESP</span>
+        <span class="lang-sep">|</span>
+        <span id="flag-us" onclick="setLang('en')" title="English" class="lang-flag">ENG</span>
+      </div>
+
       <!-- HAMBURGER -->
       <button id="mob-btn" class="lg:hidden p-2 text-sbc-blue" aria-label="Menú">
         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -938,12 +959,6 @@ section.zone-dark .text-white { color: #ffffff !important; }
      fondo: #0D1C48, gráfico a la derecha
 ═══════════════════════════════════════════ -->
 
-<!-- Language Switcher -->
-<div id="lang-switcher">
-  <span id="flag-bo" onclick="setLang('es')" title="Español" class="lang-flag active">ESP</span>
-  <span style="color:rgba(255,255,255,0.4);font-size:12px">|</span>
-  <span id="flag-us" onclick="setLang('en')" title="English" class="lang-flag">ENG</span>
-</div>
 
 <section id="modelo" style="background:#ffffff;padding:64px 0 80px">
   <div class="max-w-screen-2xl mx-auto px-5 lg:px-16">
@@ -1390,25 +1405,33 @@ tailwind.config = {
 </script>
 
 <script>
-// ─── Language switcher — comprehensive translation ───
+// ─── Language switcher ───
 var DICT_EN = {"Inicio": "Home", "La Firma": "About Us", "Soluciones": "Solutions", "Modelo": "Our Model", "Insights": "Insights", "Contacto": "Contact", "Qué hacemos": "What We Do", "Por qué Stratos": "Why Stratos", "Nuestro enfoque": "Our Approach", "La firma": "The Firm", "Transparencia": "Transparency", "Optimización Cuantitativa": "Quantitative Optimization", "Arquitectura Abierta": "Open Architecture", "Ejecución Institucional": "Institutional Execution", "Acceso Institucional": "Institutional Access", "Inversiones Estructuradas": "Structured Investments", "Estrategias Gestionadas": "Managed Strategies", "Retorno Objetivo": "Target Return", "Ver más": "See more", "Características Principales": "Key Features", "Capacidades": "Capabilities", "Estructuración Legal:": "Legal Structuring:", "Wealth Management": "Wealth Management", "Asesoría para:": "Advisory for:", "Infraestructura Institucional": "Institutional Infrastructure", "Análisis Cuantitativo": "Quantitative Analysis", "Gestión de Riesgo": "Risk Management", "Asesoría Independiente": "Independent Advisory", "Conecta con Stratos Bridge Capital": "Connect with Stratos Bridge Capital", "Stratos Bridge Capital, Ltd.": "Stratos Bridge Capital, Ltd.", "Edificio Green Tower – Piso 20": "Green Tower Building – Floor 20", "La Paz, Bolivia": "La Paz, Bolivia", "Soluciones de Inversión Estructurada de Nivel Institucional": "Institutional-Grade Structured Investment Solutions", "Asesoría independiente, ejecución institucional y optimización sistemática de riesgo-retorno en mercados globales de inversiones estructuradas.": "Independent advisory, institutional execution and systematic risk-return optimization in global structured investment markets.", "En Stratos Bridge Capital brindamos acceso institucional a soluciones de inversión estructurada, combinando asesoría independiente, análisis cuantitativo y capacidades de ejecución global.": "At Stratos Bridge Capital we provide institutional access to structured investment solutions, combining independent advisory, quantitative analysis and global execution capabilities.", "Acceso a oportunidades institucionales en productos estructurados emitidos por instituciones financieras globales.": "Institutional access to structured products issued by global financial institutions.", "Portafolios gestionados profesionalmente enfocados en retornos ajustados a riesgo.": "Professionally managed portfolios focused on risk-adjusted returns.", "Ejecución independiente y optimización de estructuras mediante un modelo de arquitectura abierta.": "Independent execution and structure optimization through an open architecture model.", "Asesoría estratégica para estructuración patrimonial, planificación financiera internacional y preservación de capital.": "Strategic advisory for wealth structuring, international financial planning and capital preservation.", "Nuestro modelo combina infraestructura institucional, análisis cuantitativo y ejecución independiente para ofrecer soluciones de inversión transparentes y optimizadas.": "Our model combines institutional infrastructure, quantitative analysis and independent execution to deliver transparent and optimized investment solutions.", "Relaciones directas con mesas estructuradoras y contrapartes financieras globales.": "Direct relationships with structuring desks and global financial counterparties.", "Análisis de escenarios, simulaciones y evaluación sistemática de riesgo-retorno impulsados por herramientas avanzadas de análisis.": "Scenario analysis, simulations and systematic risk-return evaluation powered by advanced analytical tools.", "Comparación de estructuras y condiciones entre múltiples emisores para optimizar términos de inversión.": "Comparison of structures and conditions across multiple issuers to optimize investment terms.", "Modelo independiente con estructuras claras y alineación de intereses con el inversionista.": "Independent model with clear structures and alignment of interests with the investor.", "Identificación de oportunidades de inversión a través de análisis de mercado, volatilidad y posicionamiento estratégico.": "Identification of investment opportunities through market analysis, volatility and strategic positioning.", "Back-testing, simulaciones Monte Carlo y optimización de estructuras utilizando plataformas avanzadas de análisis financiero.": "Back-testing, Monte Carlo simulations and structure optimization using advanced financial analysis platforms.", "Ejecución a través de contrapartes financieras globales mediante procesos competitivos de estructuración y pricing.": "Execution through global financial counterparties via competitive structuring and pricing processes.", "Seguimiento constante de desempeño, análisis de portafolio y reportes enfocados en transparencia y gestión de riesgo.": "Constant performance monitoring, portfolio analysis and reports focused on transparency and risk management.", "Stratos Bridge Capital combina conocimiento local con experiencia internacional para ofrecer soluciones de inversión y asesoría con estándares institucionales globales.": "Stratos Bridge Capital combines local knowledge with international experience to deliver investment solutions and advisory services with global institutional standards.", "MSc en Finanzas Cuantitativas por Washington University in St. Louis – Olin Business School. Experiencia en hedge funds, family offices, renta fija, estrategias estructuradas y optimización de portafolios.": "MSc in Quantitative Finance from Washington University in St. Louis – Olin Business School. Experience in hedge funds, family offices, fixed income, structured strategies and portfolio optimization.", "CFA Charterholder con experiencia en productos estructurados, derivados, gestión de riesgos y estrategias institucionales de inversión.": "CFA Charterholder with experience in structured products, derivatives, risk management and institutional investment strategies.", "Más de 20 años de experiencia en Wall Street, incluyendo mesas de estructuración y derivados en instituciones financieras globales.": "More than 20 years of experience on Wall Street, including structuring desks and derivatives at global financial institutions.", "Ejecutivo con amplia experiencia en dirección empresarial, M&amp;A, financiamiento estructurado y levantamiento de capital.": "Executive with extensive experience in business management, M&amp;A, structured financing and capital raising.", "Economista y ejecutivo financiero con experiencia en finanzas corporativas, wealth management y estructuración internacional de activos.": "Economist and financial executive with experience in corporate finance, wealth management and international asset structuring.", "Acceso institucional a productos estructurados emitidos por instituciones financieras globales de primer nivel.": "Institutional access to structured products issued by top-tier global financial institutions.", "Las inversiones estructuradas combinan instrumentos de renta fija y derivados para construir perfiles de riesgo-retorno alineados a objetivos específicos.": "Structured investments combine fixed income instruments and derivatives to build risk-return profiles aligned to specific objectives.", "Parámetros de inversión definidos": "Defined investment parameters", "Emisores institucionales": "Institutional issuers", "Diversificación de portafolio": "Portfolio diversification", "Gestión de riesgo": "Risk management", "Estructuras transparentes": "Transparent structures", "Servicios de ejecución independiente diseñados para optimizar pricing, términos de estructura y selección de emisores.": "Independent execution services designed to optimize pricing, structure terms and issuer selection.", "Comparación multi-emisor": "Multi-issuer comparison", "Ejecución institucional": "Institutional execution", "Monitoreo de portafolio": "Portfolio monitoring", "Reportes de inversión": "Investment reporting", "Arquitectura abierta": "Open architecture", "Estrategias gestionadas profesionalmente enfocadas en ejecución disciplinada y retornos ajustados a riesgo.": "Professionally managed strategies focused on disciplined execution and risk-adjusted returns.", "Exposición diversificada a índices globales con menor volatilidad y generación estable de cupones.": "Diversified exposure to global indices with lower volatility and stable coupon generation.", "Estrategia enfocada en generación de retornos superiores mediante exposición a acciones globales large-cap y estructuras optimizadas.": "Strategy focused on generating superior returns through exposure to global large-cap equities and optimized structures.", "El inversionista tiene dos opciones para trabajar con Stratos:": "The investor has two options to work with Stratos:", "Utiliza tu banco actual": "Use your current bank", "Coordinamos todos los detalles directamente con la institución con la que trabajas actualmente.": "We coordinate all details directly with the institution you currently work with.", "Abre una cuenta con nuestros custodios": "Open an account with our custodians", "Socios disponibles de renombre global.": "Globally renowned partners available.", "Acceso a condiciones institucionales manteniendo control total sobre cada inversión donde Stratos proporciona ideas y ejecución de calibre institucional y se adapta a la estructura legal y de gobernanza de cada inversionista.": "Access to institutional conditions maintaining full control over each investment where Stratos provides institutional-grade ideas and execution, adapting to each investor's legal and governance structure.", "Gestión integral de patrimonios, incluyendo estructuración, planificación fiscal y sucesoria, y asignación estratégica  de activos": "Comprehensive wealth management, including structuring, tax and succession planning, and strategic asset allocation", "Diseño e implementación de estructuras offshore": "Design and implementation of offshore structures", "Creación y acceso a vehículos de inversión especializados": "Creation and access to specialized investment vehicles", "Optimización legal y fiscal para inversionistas internacionales": "Legal and tax optimization for international investors", "Acceso a plataformas institucionales de estructuración y contrapartes financieras globales.": "Access to institutional structuring platforms and global financial counterparties.", "Uso de herramientas avanzadas para:": "Use of advanced tools for:", "Simulación de escenarios": "Scenario simulation", "Análisis Monte Carlo": "Monte Carlo analysis", "Optimización de portafolios": "Portfolio optimization", "Evaluación riesgo-retorno": "Risk-return evaluation", "Monitoreo constante de exposiciones, concentración, posicionamiento y desempeño de inversiones.": "Constant monitoring of exposures, concentration, positioning and investment performance.", "Soluciones diseñadas bajo un modelo de arquitectura abierta e independencia frente a emisores.": "Solutions designed under an open architecture model and independence from issuers.", "Temas sugeridos para artículos iniciales": "Suggested topics for initial articles", "Entendiendo las Estrategias de Inversión Estructurada": "Understanding Structured Investment Strategies", "Volatilidad como Fuente de Oportunidad": "Volatility as a Source of Opportunity", "Diversificación Más Allá de los Activos Tradicionales": "Diversification Beyond Traditional Assets", "Optimización de Riesgo en Portafolios Modernos": "Risk Optimization in Modern Portfolios", "Estrategias Institucionales de Generación de Yield": "Institutional Yield Generation Strategies", "El presente material tiene fines exclusivamente informativos y no constituye una oferta, recomendación o solicitud de inversión.": "This material is for informational purposes only and does not constitute an offer, recommendation or investment solicitation.", "Toda inversión implica riesgos y puede no ser adecuada para todos los inversionistas.": "All investments involve risks and may not be suitable for all investors.", "Stratos Bridge Capital – Soluciones de Inversión": "Stratos Bridge Capital – Investment Solutions", "Stratos Bridge Capital – La Firma": "Stratos Bridge Capital – About Us", "Stratos Bridge Capital – Soluciones": "Stratos Bridge Capital – Solutions", "Stratos Bridge Capital – Modelo": "Stratos Bridge Capital – Our Model", "Stratos Bridge Capital – Insights": "Stratos Bridge Capital – Insights", "Stratos Bridge Capital – Contacto": "Stratos Bridge Capital – Contact", "Research &amp; Market Analysis": "Research &amp; Market Analysis", "Monitoreo &amp; Reportes": "Monitoring &amp; Reporting", "1.": "1.", "2.": "2."};
 
 function setLang(lang) {
-  document.documentElement.lang = lang;
-  
-  // 1. Swap data-es/data-en tagged spans
-  document.querySelectorAll('[data-es][data-en]').forEach(function(el) {
-    el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.es;
-  });
-  
-  // 2. Walk all text nodes and replace Spanish → English
-  if (lang === 'en') {
-    walkAndReplace(document.body, DICT_EN, 'es');
-  } else {
-    // Reload page to restore original Spanish (simplest reliable approach)
+  if (lang === 'es') {
+    // Clear stored language BEFORE reload to avoid loop
+    try { localStorage.removeItem('sbc-lang'); } catch(e) {}
+    // Update switcher immediately before reload
+    var bo = document.getElementById('flag-bo');
+    var us = document.getElementById('flag-us');
+    if (bo) bo.classList.add('active');
+    if (us) us.classList.remove('active');
+    // Always reload to restore original Spanish HTML
     window.location.reload();
     return;
   }
+  
+  // Switch to English
+  document.documentElement.lang = 'en';
+  
+  // 1. Swap data-es/data-en tagged spans
+  document.querySelectorAll('[data-es][data-en]').forEach(function(el) {
+    el.innerHTML = el.dataset.en;
+  });
+  
+  // 2. Walk all text nodes and replace
+  walkAndReplace(document.body, DICT_EN);
   
   // 3. Update page title
   var titleMap = {
@@ -1423,35 +1446,32 @@ function setLang(lang) {
   if (titleMap[page]) document.title = titleMap[page];
   
   // 4. Toggle switcher active state
-  document.getElementById('flag-bo').classList.toggle('active', lang === 'es');
-  document.getElementById('flag-us').classList.toggle('active', lang === 'en');
+  document.getElementById('flag-bo').classList.remove('active');
+  document.getElementById('flag-us').classList.add('active');
   
   // 5. Store preference
-  try { localStorage.setItem('sbc-lang', lang); } catch(e) {}
+  try { localStorage.setItem('sbc-lang', 'en'); } catch(e) {}
 }
 
-function walkAndReplace(node, dict, fromLang) {
-  if (node.nodeType === 3) { // Text node
+function walkAndReplace(node, dict) {
+  if (node.nodeType === 3) {
     var txt = node.textContent.trim();
-    if (dict[txt]) {
+    if (txt && dict[txt]) {
       node.textContent = node.textContent.replace(txt, dict[txt]);
     }
     return;
   }
-  // Skip script/style tags
+  if (!node.childNodes) return;
   if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') return;
-  // Skip elements already handled by data-es/data-en
   if (node.hasAttribute && (node.hasAttribute('data-es') || node.hasAttribute('data-en'))) return;
-  node.childNodes.forEach(function(child) { walkAndReplace(child, dict, fromLang); });
+  node.childNodes.forEach(function(child) { walkAndReplace(child, dict); });
 }
 
-// Init on load — restore saved language
+// Init: restore saved language on page load
 (function() {
   try {
-    var saved = localStorage.getItem('sbc-lang');
-    if (saved === 'en') {
-      // Use setTimeout to ensure DOM is ready
-      setTimeout(function() { setLang('en'); }, 0);
+    if (localStorage.getItem('sbc-lang') === 'en') {
+      setTimeout(function() { setLang('en'); }, 10);
     }
   } catch(e) {}
 })();
