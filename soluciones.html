@@ -340,14 +340,13 @@ section, header, footer, div.zone-dark, div.zone-white {
     padding: 64px 48px 64px clamp(32px, calc((100vw - 1400px)/2 + 64px), 200px);
   }
   .sol-right {
-    padding: 64px 48px 64px 60px;
+    padding: 64px 48px 64px 100px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 0 0;
     align-items: start;
   }
-  /* Flat grid: title1=row1col1, title2=row1col2, ul1=row2col1, ul2=row2col2 */
-  .sol-right > div:nth-child(1) { grid-column: 1; grid-row: 1; }
+.sol-right > div:nth-child(1) { grid-column: 1; grid-row: 1; }
   .sol-right > div:nth-child(2) { grid-column: 2; grid-row: 1; }
   .sol-right > div:nth-child(3) { grid-column: 1; grid-row: 2; align-self: start; }
   .sol-right > div:nth-child(4) { grid-column: 2; grid-row: 2; align-self: start; }
@@ -1015,22 +1014,26 @@ section.zone-dark .text-white { color: #ffffff !important; }
 
     <!-- Light right column -->
     <div class="sol-right">
-      <!-- Col 1 title - row 1 -->
-      <div style="padding-right:24px;min-width:0;overflow:hidden">
-        <p class="text-sbc-dark font-medium" style="font-size:16px;height:52px;display:flex;align-items:flex-start;margin-bottom:16px"><span data-es="Características Principales" data-en="Key Features">Características Principales</span></p>
-      </div>
-      <!-- Col 2 title - row 1 -->
-      <div style="min-width:0;overflow:hidden">
-        <p class="text-sbc-dark font-medium" style="font-size:16px;height:52px;display:flex;align-items:flex-start;margin-bottom:16px"><span data-es="Capacidades" data-en="Capabilities">Capacidades</span></p>
-      </div>
-      <!-- Col 1 bullets - row 2 -->
-      <div style="padding-right:24px;min-width:0;overflow:hidden;align-self:start">
-        <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Parámetros de inversión definidos" data-en="Defined investment parameters">Parámetros de inversión definidos</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Emisores institucionales" data-en="Institutional issuers">Emisores institucionales</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Diversificación de portafolio" data-en="Portfolio diversification">Diversificación de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Gestión de riesgo" data-en="Risk management">Gestión de riesgo</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Estructuras transparentes" data-en="Transparent structures">Estructuras transparentes</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300">Acceso Institucional</span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px;overflow:hidden"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300;overflow-wrap:break-word;word-break:break-word"><span data-es="Servicios de ejecución independiente diseñados para optimizar pricing, términos de estructura y selección de emisores." data-en="Independent execution services designed to optimize pricing, structure terms and issuer selection.">Servicios de ejecución independiente<br/>diseñados para optimizar pricing,<br/>términos de estructura y selección<br/>de emisores.</span></span></li></ul>
-      </div>
-      <!-- Col 2 bullets - row 2 -->
-      <div style="min-width:0;overflow:hidden;align-self:start">
-        <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Comparación multi-emisor" data-en="Multi-issuer comparison">Comparación multi-emisor</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Ejecución institucional" data-en="Institutional execution">Ejecución institucional</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Monitoreo de portafolio" data-en="Portfolio monitoring">Monitoreo de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Reportes de inversión" data-en="Investment reporting">Reportes de inversión</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Arquitectura abierta" data-en="Open architecture">Arquitectura abierta</span></span></li></ul>
-        <div style="display:none"><svg id="isol2" width="220" height="300" viewBox="0 0 293.65 400" xmlns="http://www.w3.org/2000/svg" style="display:block;opacity:0.25"
+      <table class="w-full min-w-[800px] border-collapse text-left" style="table-layout:fixed;border:0">
+        <colgroup>
+          <col style="width:50%"/>
+          <col style="width:50%"/>
+        </colgroup>
+        <tr>
+          <td style="padding:0 32px 24px 0;vertical-align:bottom;font-size:16px;font-weight:500;color:#134377;border:0">
+            <span data-es="Características Principales" data-en="Key Features">Características Principales</span>
+          </td>
+          <td style="padding:0 0 24px 0;vertical-align:bottom;font-size:16px;font-weight:500;color:#134377;border:0">
+            <span data-es="Capacidades" data-en="Capabilities">Capacidades</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 32px 0 0;vertical-align:top;border:0">
+            <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Parámetros de inversión definidos" data-en="Defined investment parameters">Parámetros de inversión definidos</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Emisores institucionales" data-en="Institutional issuers">Emisores institucionales</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Diversificación de portafolio" data-en="Portfolio diversification">Diversificación de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Gestión de riesgo" data-en="Risk management">Gestión de riesgo</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Estructuras transparentes" data-en="Transparent structures">Estructuras transparentes</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300">Acceso Institucional</span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px;overflow:hidden"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300;overflow-wrap:break-word;word-break:break-word"><span data-es="Servicios de ejecución independiente diseñados para optimizar pricing, términos de estructura y selección de emisores." data-en="Independent execution services designed to<br/>optimize pricing, structure terms<br/>and issuer selection.">Servicios de ejecución independiente<br/>diseñados para optimizar pricing,<br/>términos de estructura y selección<br/>de emisores.</span></span></li></ul>
+          </td>
+          <td style="padding:0;vertical-align:top;border:0">
+            <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Comparación multi-emisor" data-en="Multi-issuer comparison">Comparación multi-emisor</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Ejecución institucional" data-en="Institutional execution">Ejecución institucional</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Monitoreo de portafolio" data-en="Portfolio monitoring">Monitoreo de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Reportes de inversión" data-en="Investment reporting">Reportes de inversión</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Arquitectura abierta" data-en="Open architecture">Arquitectura abierta</span></span></li></ul>
+            <div style="display:none"><svg id="isol2" width="220" height="300" viewBox="0 0 293.65 400" xmlns="http://www.w3.org/2000/svg" style="display:block;opacity:0.25"
 
 <g>
 	<g fill="#134377">
@@ -1109,8 +1112,10 @@ section.zone-dark .text-white { color: #ffffff !important; }
 	</g>
 </g>
 </svg></div>
-      </div>
-</div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
 
@@ -1347,7 +1352,7 @@ section.zone-dark .text-white { color: #ffffff !important; }
         <div style="margin-top:-17px">
           <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px">
             <p class="text-sbc-gold font-bold" style="font-size:20px">1.</p>
-            <h4 class="text-sbc-dark font-semibold" style="font-size:15px"><span data-es="Utiliza tu banco actual" data-en="Use your current bank">Utiliza tu<br/>banco actual</span></h4>
+            <h4 class="text-sbc-dark font-semibold" style="font-size:15px"><span data-es="Utiliza tu banco actual" data-en="Use your current bank">Utiliza tu banco actual</span></h4>
           </div>
           <div style="width:100%;height:3px;background:rgba(13,28,72,.2);margin:8px 0 12px"></div>
           <p class="text-sbc-dark font-light leading-[1.5]" style="font-size:13px">
@@ -1536,7 +1541,7 @@ section.zone-dark .text-white { color: #ffffff !important; }
 </g>
 </svg></div>
               <svg width="28" height="14" viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><line x1="0" y1="7" x2="22" y2="7" stroke="#134377" stroke-width="1.5"/><path d="M16 1L22 7L16 13" stroke="#134377" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-              <div style="line-height:0;pointer-events:none"><svg id="cu3" width="55" height="23" viewBox="0 0 400 266" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"
+              <div style="line-height:0;pointer-events:none"><svg id="cu3" width="80" height="33" viewBox="0 0 400 266" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"
 
 <g>
 	<rect y="0" fill="#0C1C29" width="400" height="266"/>
