@@ -721,6 +721,15 @@ section.zone-dark .text-white { color: #ffffff !important; }
   }
 }
 
+
+/* ─── SOLUCIONES: mobile/desktop table toggle ─── */
+.sol-mobile-only { display: block; }
+.sol-desktop-only { display: none; }
+@media (min-width: 1024px) {
+  .sol-mobile-only { display: none; }
+  .sol-desktop-only { display: block; }
+}
+
 </style>
 </head>
 <body>
@@ -944,7 +953,6 @@ section.zone-dark .text-white { color: #ffffff !important; }
         <a href="la-firma.html"      data-s="firma"       class="nav-link text-sbc-blue hover:text-sbc-blue"><span data-es="La Firma" data-en="About Us">La Firma</span></a>
         <a href="soluciones.html" data-s="soluciones"  class="nav-link nav-active text-sbc-blue hover:text-sbc-blue"><span data-es="Soluciones" data-en="Solutions">Soluciones</span></a>
         <a href="modelo.html"     data-s="modelo"      class="nav-link text-sbc-blue hover:text-sbc-blue"><span data-es="Modelo" data-en="Model">Modelo</span></a>
-        <a href="insights.html"   data-s="insights"    class="nav-link text-sbc-blue hover:text-sbc-blue"><span data-es="Insights" data-en="Insights">Insights</span></a>
         <a href="contacto.html"   data-s="contacto"    class="nav-link text-sbc-blue hover:text-sbc-blue"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
       </nav>
 
@@ -978,7 +986,6 @@ section.zone-dark .text-white { color: #ffffff !important; }
     <a href="la-firma.html"      class="text-white font-light text-base"><span data-es="La Firma" data-en="About Us">La Firma</span></a>
     <a href="soluciones.html" class="text-white font-light text-base"><span data-es="Soluciones" data-en="Solutions">Soluciones</span></a>
     <a href="modelo.html"     class="text-white font-light text-base"><span data-es="Modelo" data-en="Our Model">Modelo</span></a>
-    <a href="insights.html"   class="text-white font-light text-base"><span data-es="Insights" data-en="Insights">Insights</span></a>
     <a href="contacto.html"   class="text-white font-light text-base"><span data-es="Contacto" data-en="Contact">Contacto</span></a>
   </nav>
 </div>
@@ -1014,6 +1021,95 @@ section.zone-dark .text-white { color: #ffffff !important; }
 
     <!-- Light right column -->
     <div class="sol-right">
+
+      <!-- MOBILE: stacked layout -->
+      <div class="sol-mobile-only">
+        <p class="text-sbc-dark font-medium mb-4" style="font-size:16px"><span data-es="Características Principales" data-en="Key Features">Características Principales</span></p>
+        <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Parámetros de inversión definidos" data-en="Defined investment parameters">Parámetros de inversión definidos</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Emisores institucionales" data-en="Institutional issuers">Emisores institucionales</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Diversificación de portafolio" data-en="Portfolio diversification">Diversificación de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Gestión de riesgo" data-en="Risk management">Gestión de riesgo</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Estructuras transparentes" data-en="Transparent structures">Estructuras transparentes</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300">Acceso Institucional</span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px;overflow:hidden"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300;overflow-wrap:break-word;word-break:break-word"><span data-es="Servicios de ejecución independiente diseñados para optimizar pricing, términos de estructura y selección de emisores." data-en="Independent execution services designed to<br/>optimize pricing, structure terms<br/>and issuer selection.">Servicios de ejecución independiente<br/>diseñados para optimizar pricing,<br/>términos de estructura y selección<br/>de emisores.</span></span></li></ul>
+        <p class="text-sbc-dark font-medium mb-4 mt-8" style="font-size:16px"><span data-es="Capacidades" data-en="Capabilities">Capacidades</span></p>
+        <ul style="list-style:none;padding:0;margin:0"><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Comparación multi-emisor" data-en="Multi-issuer comparison">Comparación multi-emisor</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Ejecución institucional" data-en="Institutional execution">Ejecución institucional</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Monitoreo de portafolio" data-en="Portfolio monitoring">Monitoreo de portafolio</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Reportes de inversión" data-en="Investment reporting">Reportes de inversión</span></span></li><li style="display:flex;align-items:flex-start;gap:7px;margin-bottom:5px"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(13,28,72,0.82);margin-top:5px;flex-shrink:0;opacity:.7"></span><span style="font-size:16px;line-height:1.45;color:rgba(13,28,72,0.82);font-weight:300"><span data-es="Arquitectura abierta" data-en="Open architecture">Arquitectura abierta</span></span></li></ul>
+        <div style="display:none"><svg id="isol2" width="220" height="300" viewBox="0 0 293.65 400" xmlns="http://www.w3.org/2000/svg" style="display:block;opacity:0.25"
+
+<g>
+	<g fill="#134377">
+		<path fill="#081C4B" d="M143.1,399.91c-16.05,0.01-32.11,0.19-48.16-0.04c-18.1-0.25-28.32-11.23-27.78-29.31
+			c1.18-39,35.19-70.08,76.47-69.88c40.94,0.2,74.85,31.98,75.68,70.93c0.35,16.42-10.36,27.88-27.03,28.22
+			C175.89,400.16,159.49,399.9,143.1,399.91z M142.77,391.39c16.4,0,32.81,0.26,49.21-0.09c12.06-0.25,18.98-7.89,18.76-19.65
+			c-0.63-33.65-30.85-62.14-66.29-62.52c-36.61-0.38-67.52,26.97-68.77,60.83c-0.51,13.96,6.05,21.2,19.94,21.39
+			C111.33,391.58,127.06,391.41,142.77,391.39z"/>
+		<path fill="#081C4B" d="M147.03,202.09c24.21,0,43.75,19.33,43.92,43.43c0.18,24.64-19.42,44.77-43.71,44.89
+			c-24.43,0.12-44.53-19.83-44.5-44.16C102.76,221.56,122.29,202.09,147.03,202.09z M146.73,210.57
+			c-19.39,0.08-35.34,15.86-35.52,35.16c-0.19,19.66,15.98,35.94,35.8,36.06c19.06,0.11,35.35-16.08,35.5-35.28
+			C182.66,226.72,166.51,210.49,146.73,210.57z"/>
+		<path fill="#081C4B" d="M92.74,254.36c0.16,19.3-14.7,34.71-33.84,35.08c-19.49,0.38-35.66-15.1-35.87-34.36
+			c-0.22-19.21,15.78-35.23,35.14-35.2C77.21,219.91,92.58,235.25,92.74,254.36z M57.96,280.85c14.55-0.03,26.07-11.32,26.31-25.8
+			c0.25-14.76-11.72-26.62-26.66-26.44c-14.39,0.18-26,11.98-25.87,26.29C31.87,269.24,43.63,280.89,57.96,280.85z"/>
+		<path fill="#081C4B" d="M235.1,289.51c-19.42-0.25-34.6-16.23-34.12-35.92c0.47-19.01,16.25-34.05,35.34-33.69
+			c18.99,0.36,34.42,16.05,34.33,34.91C270.56,274.19,254.61,289.76,235.1,289.51z M235.07,280.83c14.5,0.31,26.4-10.81,26.97-25.19
+			c0.56-14.17-10.92-26.49-25.18-27.03c-14.91-0.56-27.21,10.97-27.44,25.73C209.2,268.65,220.68,280.51,235.07,280.83z"/>
+		<path fill="#081C4B" d="M235.09,372.24c2.32-1.74,4.55-4.82,6.97-4.98c9.18-0.59,18.43-0.08,27.64-0.28
+			c11.8-0.25,16.63-6.04,15.18-17.74c-3.65-29.31-31.87-48.18-62.72-41.96c-7.21,1.46-7.21,1.46-9.53-5.01
+			c35.72-17.69,82.89,13.02,80.95,52.7c-0.56,11.53-8.39,19.86-20.18,20.34c-11.91,0.48-23.86,0.11-35.79,0.11
+			C236.78,374.37,235.94,373.3,235.09,372.24z"/>
+		<path fill="#081C4B" d="M81.11,302.08c0.11,7.44-3.96,6.49-9.36,5.4C40.84,301.25,13.73,318.94,9.09,348
+			c-2.06,12.86,2.77,18.78,15.69,18.98c8.87,0.14,17.77-0.25,26.62,0.24c2.2,0.12,4.26,2.7,6.38,4.15
+			c-2.18,1.37-4.32,3.84-6.55,3.93c-9.88,0.42-19.8,0.45-29.69,0.08c-13.77-0.51-21.92-9.56-21.52-23.28
+			C1.14,313.16,45.23,285.92,81.11,302.08z"/>
+	</g>
+	<g fill="#134377">
+		<path fill="#081C4B" d="M149.48,17.88c0,4.73,0.01,9.45-0.01,14.18c-0.01,2.3-1.05,3.7-2.73,3.55c-2.06-0.18-2.59-1.64-2.59-3.47
+			c0.01-9.53,0-19.06,0.03-28.59c0.01-2.39,1.02-3.69,2.73-3.53c2.25,0.2,2.59,1.82,2.58,3.69
+			C149.46,8.43,149.48,13.15,149.48,17.88z"/>
+		<path fill="#081C4B" d="M186.11,52.37c-0.84-0.75-1.95-1.27-2.16-2.04c-0.24-0.87,0.02-2.23,0.61-2.91c1.87-2.17,3.98-4.12,6.01-6.15
+			c4.88-4.88,9.72-9.81,14.7-14.59c0.8-0.77,2.37-1.39,3.39-1.17c2.04,0.45,2.24,2.85,0.5,4.62c-4.69,4.74-9.42,9.44-14.14,14.16
+			c-2.14,2.14-4.25,4.31-6.43,6.4C187.94,51.31,187.1,51.71,186.11,52.37z"/>
+		<path fill="#081C4B" d="M110.43,49.39c-0.78,0.9-1.3,2.06-2.03,2.21c-0.95,0.19-2.36-0.09-3.05-0.74c-3.63-3.38-7.09-6.94-10.6-10.44
+			c-3.35-3.34-6.68-6.7-10.01-10.05c-1.65-1.67-1.91-3.28-0.64-4.4c1.59-1.4,2.92-0.75,4.24,0.57c6.72,6.76,13.48,13.48,20.2,20.25
+			C109.21,47.47,109.68,48.35,110.43,49.39z"/>
+		<path fill="#081C4B" d="M82.94,149.77c0.61-0.96,0.94-1.75,1.5-2.32c6.82-6.88,13.67-13.72,20.5-20.57c1.3-1.31,2.77-1.95,4.25-0.49
+			c1.49,1.48,0.8,2.91-0.51,4.22c-6.8,6.78-13.55,13.62-20.43,20.32c-0.78,0.76-2.3,1.09-3.43,1.02
+			C84.18,151.9,83.63,150.62,82.94,149.77z"/>
+		<path fill="#081C4B" d="M186.22,125.26c0.97,0.63,1.76,0.97,2.34,1.54c6.89,6.84,13.74,13.71,20.61,20.58
+			c1.25,1.25,1.78,2.67,0.43,4.08c-1.35,1.41-2.81,0.99-4.08-0.28c-6.92-6.91-13.87-13.8-20.7-20.81c-0.7-0.72-0.96-2.23-0.79-3.27
+			C184.14,126.41,185.39,125.91,186.22,125.26z"/>
+		<path fill="#081C4B" d="M217.64,86.15c4.8,0,9.61-0.01,14.41,0c2.33,0.01,3.72,1.03,3.55,2.68c-0.21,2.04-1.63,2.55-3.48,2.54
+			c-9.53-0.03-19.06,0-28.58-0.02c-2.37,0-3.66-0.97-3.53-2.69c0.16-2.13,1.66-2.53,3.46-2.52
+			C208.19,86.16,212.91,86.15,217.64,86.15z"/>
+		<path fill="#081C4B" d="M75.72,91.35c-4.74,0-9.47-0.02-14.2,0.01c-1.84,0.01-3.39-0.45-3.4-2.57c-0.02-2.09,1.46-2.65,3.34-2.64
+			c9.55,0.02,19.1,0,28.64,0.01c2.46,0,3.65,0.91,3.53,2.68c-0.14,2.17-1.68,2.53-3.46,2.53c-4.81-0.01-9.63,0-14.44,0
+			C75.72,91.36,75.72,91.36,75.72,91.35z"/>
+		<path fill="#081C4B" d="M150.66,112.02c-0.04,0.71-0.06,1.4-0.12,2.09c-0.2,2.07-1.35,3.25-3.42,3.41c-1.98,0.16-3.83-1.21-3.78-3.22
+			c0.05-2.09-0.89-2.7-2.64-3.27c-4.52-1.48-7.71-4.48-9.29-9.04c-0.91-2.63-0.18-4.61,1.96-5.43c2.12-0.82,4.07,0.19,4.93,2.84
+			c2.23,6.91,12.79,6.41,16.13,2.88c1.86-1.97,1.37-5.26-1.27-6.75c-1.84-1.04-4-1.56-6.05-2.2c-2.5-0.79-5.14-1.22-7.52-2.26
+			c-4.72-2.07-7.45-5.71-7.33-11.06c0.12-5.36,2.87-9.06,7.64-11.21c1.93-0.87,3.72-1.29,3.53-4.15c-0.12-1.79,2.01-3.05,3.88-2.81
+			c1.93,0.25,3.24,1.38,3.18,3.35c-0.06,1.81,0.61,2.53,2.27,3.06c3.87,1.24,6.65,3.85,8.43,7.5c1.19,2.45,0.63,4.61-1.38,5.6
+			c-1.94,0.95-3.83,0.16-5.13-2.14c-2.55-4.51-7.78-6.02-12.15-3.51c-1.8,1.04-2.95,2.52-2.9,4.68c0.05,2.13,1.33,3.5,3.19,4.14
+			c2.25,0.77,4.64,1.15,6.92,1.88c2.34,0.75,4.76,1.46,6.89,2.65c4.36,2.43,6.48,6.35,6.22,11.36c-0.27,5.07-3.35,8.15-7.73,10.11
+			C153.7,111.1,152.2,111.49,150.66,112.02z"/>
+		<g>
+			<path fill="#081C4B" d="M146.85,158.27c-3.59,0-7.19,0.03-10.78,0c-5.29-0.04-8.34-3.02-8.37-8.27
+				c-0.06-12.27-3.66-23.41-10.42-33.61c-4.41-6.65-8.88-13.27-11.24-21.04c-7.45-24.52,6.58-49.22,31.46-55.29
+				c22.75-5.55,46.84,9.91,51.29,32.94c2.36,12.2,0.08,23.53-6.55,34.01c-2.77,4.39-5.62,8.73-8.3,13.17
+				c-5.48,9.07-7.67,19.05-7.79,29.55c-0.07,5.48-3.04,8.54-8.5,8.55C154.04,158.27,150.44,158.26,146.85,158.27z M146.99,152.86
+				C146.99,152.86,146.99,152.86,146.99,152.86c3.26,0.01,6.52,0.01,9.78,0.01c3.66,0,4.06-0.41,4.1-4.16
+				c0.08-8.54,1.33-16.94,5.13-24.61c3.09-6.24,6.87-12.14,10.57-18.06c4.22-6.77,7.18-13.85,7.7-21.95
+				c1.59-24.48-21.1-44.17-45.07-38.95c-20.52,4.47-33.22,24.28-28.93,45.02c1.4,6.78,4.44,12.83,8.34,18.42
+				c8.75,12.56,14.77,26,14.38,41.7c-0.04,1.77,1.03,2.61,2.83,2.6C139.54,152.84,143.26,152.86,146.99,152.86z"/>
+			<path fill="#081C4B" d="M146.88,169.62c4.25,0,8.51-0.03,12.76,0.01c2.48,0.02,4,1.74,3.39,3.75c-0.44,1.44-1.45,2.18-2.96,2.18
+				c-8.77,0.01-17.54,0.03-26.31-0.01c-1.86-0.01-3.12-1.29-3.12-2.92c-0.01-1.71,1.3-2.97,3.29-2.99
+				C138.24,169.6,142.56,169.63,146.88,169.62C146.88,169.63,146.88,169.63,146.88,169.62z"/>
+			<path fill="#081C4B" d="M146.68,166.95c-4.12,0-8.23,0.02-12.35-0.01c-2.3-0.01-3.71-1.2-3.69-3c0.02-1.79,1.45-2.98,3.74-2.98
+				c8.37-0.02,16.73-0.04,25.1-0.01c2.54,0.01,4.08,1.6,3.6,3.61c-0.43,1.8-1.75,2.37-3.44,2.37c-4.32,0-8.63,0-12.95,0
+				C146.68,166.94,146.68,166.94,146.68,166.95z"/>
+			<path fill="#081C4B" d="M157.34,178.46c-0.64,3.67-4.01,6.64-7.46,6.65c-2.06,0.01-4.13,0.02-6.19,0c-3.25-0.04-6.74-3.23-7.21-6.65
+				C143.44,178.46,150.38,178.46,157.34,178.46z"/>
+		</g>
+	</g>
+</g>
+</svg></div>
+      </div>
+      <!-- DESKTOP: table layout -->
+      <div class="sol-desktop-only">
       <table class="w-full min-w-[800px] border-collapse text-left" style="table-layout:fixed;border:0">
         <colgroup>
           <col style="width:50%"/>
@@ -1115,6 +1211,7 @@ section.zone-dark .text-white { color: #ffffff !important; }
           </td>
         </tr>
       </table>
+      </div>
     </div>
   </div>
 
@@ -1942,7 +2039,7 @@ function setLang(lang) {
     'la-firma.html': 'Stratos Bridge Capital – About Us',
     'soluciones.html': 'Stratos Bridge Capital – Solutions',
     'modelo.html': 'Stratos Bridge Capital – Our Model',
-    'insights.html': 'Stratos Bridge Capital – Insights',
+    
     'contacto.html': 'Stratos Bridge Capital – Contact'
   };
   var page = window.location.pathname.split('/').pop() || 'stratosindex.html';
