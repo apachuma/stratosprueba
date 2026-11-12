@@ -406,3 +406,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.75);font-size:.92rem}
 .cust .note{flex:1 1 170px;min-width:0}
 @media(max-width:899px){.ft h4.blank{display:none}.ft>div:nth-child(3){margin-top:-26px}}
 @media(max-width:560px){.cust-row.nw .arr{display:none}.cust-row.nw .note{flex-basis:100%}}
+/* Inicio sin bloque AUM (cambios Adrian 12-nov-2026) */
+@media(min-width:1024px){.hero-in.single{grid-template-columns:1fr;padding-top:120px;padding-bottom:130px}}
+.hero-in.single>div{max-width:860px}
