@@ -409,3 +409,5 @@ footer{background:var(--dark);color:rgba(255,255,255,.75);font-size:.92rem}
 /* Inicio sin bloque AUM (cambios Adrian 12-nov-2026) */
 @media(min-width:1024px){.hero-in.single{grid-template-columns:1fr;padding-top:120px;padding-bottom:130px}}
 .hero-in.single>div{max-width:860px}
+/* Texto justificado (pedido Adrian, 17-nov-2026) */
+.just{text-align:justify}
